@@ -36,7 +36,9 @@ public class Admin
 			}
  
 			// Prepare the html table to be displayed
-			output = "<table border='1'><tr><th>Name</th><th>Email</th><th>Phone</th>"+"<th>Username</th><th>Password</th><th>Update</th><th>Remove</th></tr>";
+			output = "<table border='1' class='table'>"
+					+ "  <thead><tr><th>Name</th><th>Email</th><th>Phone</th>"
+					+"<th>Username</th><th>Password</th><th>Update</th><th>Remove</th></tr>  <thead>";
  
 			String query = "select * from log";
 			
@@ -55,14 +57,14 @@ public class Admin
 				String password = rs.getString("password");
  
 				// Add into the html table
-				output += "<tr><td><input id='hidItemIDUpdate'name='hidItemIDUpdate'type='hidden' value='" + id+ "'>" + name + "</td>";
+				output += "<tbody><tr><td><input id='hidItemIDUpdate'name='hidItemIDUpdate'type='hidden' value='" + id+ "'>" + name + "</td>";
 				output += "<td>" + email + "</td>";
 				output += "<td>" + phone + "</td>";
 				output += "<td>" + username + "</td>";
 				output += "<td>" + password + "</td>";
  
 				// buttons
-				output += "<td><input name='btnUpdate'type='button' value='Update'class='btnUpdate btn btn-secondary'></td>"+ "<td><input name='btnRemove'type='button' value='Remove'class='btnRemove btn btn-danger'data-itemid='"+ id + "'>" + "</td></tr>";
+				output += "<td><input name='btnUpdate'type='button' value='Update'class='btnUpdate btn btn-secondary'></td>"+ "<td><input name='btnRemove'type='button' value='Remove'class='btnRemove btn btn-danger'data-itemid='"+ id + "'>" + "</td></tr><tbody>";
 			}
  
 			con.close();

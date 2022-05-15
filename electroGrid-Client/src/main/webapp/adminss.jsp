@@ -22,17 +22,25 @@ body {
 .opa {
 opacity: 0.8;
 }
+
+.buttonStyle{
+	width: 100%;
+}
+
+.txtStyles{
+	font-family:Comic Sans MS;
+}
 </style>
 </head>
 <body>
-	
+
 		<div class="container opa">
 			<div class="row">
 				
 					<div class="card border-0 shadow rounded-3 my-5">
 						<div class="card-body p-4 p-sm-5">
-							<h5 class="card-title text-center mb-5 fw-light fs-12 ">Admin
-								Managment</h5>
+							<h2 class="card-title text-center mb-5 fw-light fs-12 text-warning txtStyles">Admin
+								Managment</h2>
 
 
 
@@ -49,12 +57,14 @@ opacity: 0.8;
 								Password: <input id="password" name="password" type="password"
 									class="form-control form-control-sm"> <br> <input
 									id="btnSave" name="btnSave" type="button" value="Save"
-									class="btn btn-outline-warning btn-rounded-pill rounded-pill btnTxt  text-bold"
+									class="btn btn-warning btn-rounded-pill rounded-pill btnTxt buttonStyle border border-info"
 				data-mdb-ripple-color="dark"> <input type="hidden"
 									id="hidItemIDSave" name="hidItemIDSave" value="">
 							</form>
+							<br>
 
 							<div id="alertSuccess" class="alert alert-success"></div>
+							<br>
 							<div id="alertError" class="alert alert-danger"></div>
 
 							<br>
